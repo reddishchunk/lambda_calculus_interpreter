@@ -13,7 +13,7 @@ void set_data(data *d, double val) {
 	
 	switch Type {
 		case int8t:
-			d->int8it_val = (int8_t)val;
+			d->int8t_val = (int8_t)val;
 			break;
 		case int16t:
 			d->int16t_val = (int16_t)val;
