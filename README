@@ -1,9 +1,9 @@
 License: MPL 2.0 (See LICENSE file for more info!)
 
 Contributor Note: All contributors must include the following comment at the top of each source file:
-/* LICENSE: MPL2.0
- * AUTHOR: (insert username/name)
- * DATE: (current date)
+/* LICENSE: MPL2.0 (SEE LICENSE FILE FOR MORE INFORMATION)
+ * AUTHOR: (insert username/name here)
+ * DATE: (current date here)
  */
 
 Note: If co-authoring or changing a piece of existent code, add your own LICENSE, AUTHOR, and DATE fields below the previous fields created by other(s).
