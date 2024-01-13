@@ -10,7 +10,7 @@ Note: If co-authoring or changing a piece of existent code, add your own LICENSE
 
 The Lambda Calculus Interpreter is designed as an interpreter to interpret lambda calculus expressions. This source code is for the typed lambda calculus evaluator.
 
-The LCI is designed to run source code directly without compilation or intermediate bytecode. Design considerations for the LCI should emphasize readability of code, with optimizations being explicit in detail and weighted against maintainability of code. Comments should be used whenever code blocks are self explanatory and at the top of files to demonstrate implementation details. The project is to be made in C99, following K&R conventions and style. Data should be kept within nearest scope whenever possible.
+The LCI is designed to run source code directly without compilation or intermediate bytecode. Design considerations for the LCI should emphasize readability of code, with optimizations being explicit in detail and weighted against maintainability of code. Naming should make code blocks self explanatory, with comments demonstrating functionality where necessary, and at the top of files to demonstrate a summary of implementation details. The project is to be made in C99, following K&R conventions and style. Data should be kept within nearest scope within reason.
 
 Components of this project include:
 	- Buffer to handle loading file into memory
