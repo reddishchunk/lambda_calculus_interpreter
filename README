@@ -18,7 +18,10 @@ Components of this project include:
 	- Parser to construct AST tree out of tokens
 	- Evaluation of AST tree
 	Notes:
-	* Between the lexer and the parser, processing functionality should be delegated to the lexer when possible.
-	* Default configurations and outside dependencies should be kept to a minimum. The C standard library should be used extensively, reserving outside libraries only in cases that are strictly necessary.
+	* Between the lexer and the parser, processing functionality should be delegated to 
+	  the lexer when possible.
+	* Default configurations and outside dependencies should be kept to a minimum. 
+          The C standard library should be used extensively, reserving outside libraries only
+          in cases that are strictly necessary.
 	* Typed lambda calculus should be handled in a way that mirrors its evaluation by hand.
 	* The LCI does not implement a garbage collector. Freeing of pointers must be done explicitly.
