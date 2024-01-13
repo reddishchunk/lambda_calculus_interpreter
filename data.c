@@ -1,3 +1,8 @@
+/* LICENSE: MPL2.0 (SEE LICENSE FILE FOR MORE INFORMATION)
+ * AUTHOR: reddishchunk
+ * DATE: 2024/01/12
+ */
+
 #include "data.h"
 
 void set_type(data *d, Type t) {

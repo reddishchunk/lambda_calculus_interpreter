@@ -1,3 +1,15 @@
+/* LICENSE: MPL2.0 (SEE LICENSE FILE FOR MORE INFORMATION)
+ * AUTHOR: reddishchunk
+ * DATE: 2024/01/12
+ */
+
+/* DESCRIPTION: The data struct is to be used for passing data during
+ * interpretation. Using a union, data types should be able to remain strict in
+ * order to reduce bugs. Data types will be determined dynamically by the
+ * interpreter and users will have no interaction with data types in their
+ * programs.
+ */
+
 #ifndef DATA_H
 #define DATA_H
 
