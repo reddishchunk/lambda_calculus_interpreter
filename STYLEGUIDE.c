@@ -13,5 +13,5 @@ static int _internal_return_integer();	//functions used solely within a .c file
 					//set as static, and have a prefix of
 					// "_" preceding the name
 
-//line length should not excede 80 characters, including comments. Here is #80.
+//line length should not exceed 80 characters, including comments. Here is #80.
 
