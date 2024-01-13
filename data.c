@@ -11,7 +11,7 @@ void set_type(data *d, Type t) {
 
 void set_data(data *d, double val) {
 	
-	switch Type {
+	switch d->type {
 		case int8t:
 			d->int8t_val = (int8_t)val;
 			break;
