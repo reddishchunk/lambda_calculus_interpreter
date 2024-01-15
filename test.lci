@@ -1,0 +1,14 @@
+#comment
+#@include stdlib
+@enter main
+
+main = add(2, mult(3,4))
+
+add x y = \x.\y. x + y
+
+mult x y = \x y. x * y
+
+#note that the following functions MUST be in main
+# sample_io_out = IO(stdout, "hello")
+# sample_bind x y z = add -> mult
+		#add strips x & y, mult takes result of add and mults by z

@@ -1,0 +1,39 @@
+#Backus-Naur form inspired grammar for LCI
+
+#predicates: :x(x occurrences), :x+(x or more occurrences),
+# :x-(x or fewer occurrences), :x+3(between x and x+3 occurrences),
+# :+ (infinite occurrences), :-(no occurrences), :o (optional),
+# :o+ (any amount of optional)
+# NOTE: +1 is the default predicate
+
+<token> ::= <dataType> | <arg> | 
+
+<arg> ::= <ident> | <const>
+<const> ::= <dataType>
+<dataType> ::= <int8> | <int16> | <int32> | <int64> |
+		<uint8> | <uint16> | <uint32> | <uint64> |
+		<float> | <double> | <string>
+
+<arithSym> ::= <add> | <sub> | <mul> | <div>
+
+
+<string> ::= <alpha> | <numer> | <underln>
+<alpha> ::= <upper_alpha:+> & <lower_alpha:+>
+<upper_alpha> ::= <"A-Z":+>
+<lower_alpha> ::= <"a-z":+>
+<numer> ::= <"0-9":+>
+<ident> ::= <string> <ws:o+> <assign>
+<assign_expr> ::= <entity_start> <ident> <ws:o+> <assign_body:1+> <entity_end>
+<assign_body> ::= (<expr> | <const>) <ws:1+>
+
+<entity_end> ::= <entity_start>
+<entity_start> ::= <newln:1+> <tab:-> <ident>
+<scope_in> ::= <newln:1+> <tab:x+1>
+<scope_out> ::= <newln:1+> <tab:x-1>
+
+<lam_expr> ::= <lam_head1:+> <lam_body> | <lam_head2> <lam_body>
+<lam_head1> ::= <lam_sym:1> <arg:1> <lam_sep:1>
+<lam_head2> ::= <lam_sym:1> <arg:+> <lam_sep:1>
+<lam_body> ::= <arith_expr>
+
+<list> ::= <lsqbr> <arg:+> <rsqbr>

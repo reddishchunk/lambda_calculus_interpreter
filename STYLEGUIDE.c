@@ -1,3 +1,8 @@
+/* LICENSE: MPL2.0 (SEE LICENSE FILE FOR MORE INFORMATION)
+ * AUTHOR: reddishchunk
+ * DATE: 2024-01-12
+ */
+
 #define CONSTANT 123	//declare constants in all caps
 
 int function() {	//curly bracket opens on same line as function name

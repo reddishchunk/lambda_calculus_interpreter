@@ -1,0 +1,51 @@
+
+The LCI language is designed to be implemented as closely to typed lambda
+calculus as possible. IO is to remain in the main function. Basic constructs
+such as boolean logic are to be implemented in lambda calculus instead of as
+primitives.
+LCI will use SMP by default. User may use monads to enforce singly evaluation
+order of functions.
+
+Symbols used in LCI:
+
+@				interpreter instruction
+->				bind
+\				lambda function
+.				separator within lambda function
+()				precedence operators
+[]				list operators
+^				exponent operator
+#				single line comment
+=				assign
+...				infinity
+?				placeholder
+,				syntactic sugar: separate function arguments
++, -, *, /			basic infix arithmetic operators
+//				modulus operator
+<, >, <=, >=			equality operators
+""				string qualifiers, symbol escape for assignment	
+{}				multiline entity (escapes newlines) operators
+
+Valid identifier components:
+	alphanumberic, underscore(_)
+
+Keywords:
+IO_OP				input/output operation
+	use following with io_op:
+	STDOUT			io to screen
+	STDIN			io from screen
+	STDERR			io to stderr
+
+Lambda primitives:
+\ for lambda function declaration. Single character arguments can be used
+as-is. Multiple character arguments must be enclosed in () operators.
+
+
+Implementation details relevant to usage of LCI:
+
+Type system: LCI implements a dynamic type system with strong typing.
+Values will be deduced to the smallest sizes available. Types are
+promoted automatically.
+
+Input and output is limited to the function specified within the entry point.
+Input variables must be initialized with input from input IO.

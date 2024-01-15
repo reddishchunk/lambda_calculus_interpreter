@@ -1,0 +1,17 @@
+include: stdlib.lci
+enter: main
+#enter uses main as default
+
+main = {
+	mult(1, add(2, 3)) ->
+	square ->
+	io(stdout)
+	}
+
+mult x y = x * y
+
+"*" arg1 arg2 = \(arg1)(arg2).(arg1)*(arg2)
+
+add x y = x + y
+
+"+" x y = \xy.x+y
