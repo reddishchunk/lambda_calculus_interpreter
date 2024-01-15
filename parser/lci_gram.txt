@@ -4,7 +4,9 @@
 # :x-(x or fewer occurrences), :x+3(between x and x+3 occurrences),
 # :+ (infinite occurrences), :-(no occurrences), :o (optional),
 # :o+ (any amount of optional)
-# NOTE: +1 is the default predicate
+# use :or/xor/and,"xyz" predicate to bind two predicates together
+# 	using the string as the binding namespace
+# NOTE: :1 is the default predicate
 
 <token> ::= <dataType> | <arg> | 
 
@@ -37,3 +39,8 @@
 <lam_body> ::= <arith_expr>
 
 <list> ::= <lsqbr> <arg:+> <rsqbr>
+
+<terminal> ::= <eol> <tab:-> <ident/lambda_expr/arith_expr>
+
+
+//lexer should trim comments and optional whitespace and unused lines
